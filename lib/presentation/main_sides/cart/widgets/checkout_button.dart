@@ -19,30 +19,26 @@ class CheckoutButton extends StatelessWidget {
   }
 
   Widget _buildButtonContent() {
-    return Container(
-      margin: const EdgeInsets.all(15),
-      child: Row(
-        children: const [
-          Padding(
-            padding: EdgeInsets.only(left: 8.0, right: 8.0),
-            child: Text('5', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20)),
-          ),
-          VerticalDivider(
-            width: 20,
-            thickness: 1,
-            indent: 20,
-            endIndent: 0,
-            color: Colors.white,
-          ),
-          Expanded(
-            child: Align(
-              alignment: Alignment.center,
-              child: Text('Charge \$${389.85}', style: TextStyle(fontSize: 20),
-              ),
+    return Row(
+      children: [
+        const Padding(
+          padding: EdgeInsets.only(left: 8.0, right: 8.0),
+          child: Text('5', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20.0)),
+        ),
+        const SizedBox(width: 15,),
+        Container(
+          height: 50,
+          width: 0.5,
+          color: Colors.white,
+        ),
+        const Expanded(
+          child: Align(
+            alignment: Alignment.center,
+            child: Text('Charge \$${389.85}', style: TextStyle(fontSize: 20.0),
             ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

@@ -32,7 +32,11 @@ class _ProductItemWidgetState extends State<ProductItemWidget> {
               isSelected = !isSelected;
             });
           },
-          child: DefaultContainer(
+          child: Container(
+            padding: const EdgeInsets.all(10),
+            margin: const EdgeInsets.all(10), 
+            width: 200,
+            color: Colors.white,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
