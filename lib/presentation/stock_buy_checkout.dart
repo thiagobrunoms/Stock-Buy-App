@@ -29,7 +29,6 @@ class _StockBuyCheckoutState extends State<StockBuyCheckout> {
               ],
             ),
           ),
-          
           bottomNavigationBar: BottomNavigationBar(
             currentIndex: bottomAppBarIndex,
             items: [
