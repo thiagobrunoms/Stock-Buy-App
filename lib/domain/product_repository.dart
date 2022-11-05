@@ -35,7 +35,7 @@ class ProductRepositoryImpl implements ProductRepository {
   }
 
   Product _generateMapleKeyboard() {
-    return Product(name: 'Maple Keyboard', imageUrl: 'assets/images/maple_keyboard.png', quantityInStock: 24, price: 983);
+    return Product(name: 'Maple Keyboard', imageUrl: 'assets/images/mapple_keyboard.png', quantityInStock: 24, price: 983);
   }
   
 }

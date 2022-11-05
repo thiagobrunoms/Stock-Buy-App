@@ -15,6 +15,7 @@ class CartAppBar extends StatelessWidget {
           Row(
             children: [
               Icon(Icons.delete, color: Theme.of(context).primaryColor),
+              const SizedBox(width: 10,),
               Icon(Icons.more_horiz, color: Theme.of(context).primaryColor)
             ],
           ),

@@ -11,7 +11,7 @@ class ProductListWidgetController {
     math.Random r = math.Random();
     List<Product> products = [];
 
-    for (int i = 0; i < 20; i++) {
+    for (int i = 0; i < 21; i++) {
       int randomProductIndex = r.nextInt(5);
       products.add(await repository.getProductById(randomProductIndex));
     }

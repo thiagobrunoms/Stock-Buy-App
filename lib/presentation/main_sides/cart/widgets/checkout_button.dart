@@ -22,24 +22,25 @@ class CheckoutButton extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.all(15),
       child: Row(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
-              Padding(
-                padding: EdgeInsets.only(left: 8.0, right: 8.0),
-                child: Text('5', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
-              ),
-              VerticalDivider(
-                width: 20,
-                thickness: 1,
-                indent: 20,
-                endIndent: 0,
-                color: Colors.white,
-              ),
-            ],
+        children: const [
+          Padding(
+            padding: EdgeInsets.only(left: 8.0, right: 8.0),
+            child: Text('5', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20)),
           ),
-          const Expanded(child: Text('Charge \$${389.85}'))
+          VerticalDivider(
+            width: 20,
+            thickness: 1,
+            indent: 20,
+            endIndent: 0,
+            color: Colors.white,
+          ),
+          Expanded(
+            child: Align(
+              alignment: Alignment.center,
+              child: Text('Charge \$${389.85}', style: TextStyle(fontSize: 20),
+              ),
+            ),
+          ),
         ],
       ),
     );

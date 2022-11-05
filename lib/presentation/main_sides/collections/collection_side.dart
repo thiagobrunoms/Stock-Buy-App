@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:stock_and_buy_app/presentation/dtos/product.dart';
 import 'package:stock_and_buy_app/presentation/main_sides/collections/widgets/collections_appbar.dart';
 import 'package:stock_and_buy_app/presentation/main_sides/collections/widgets/product_item_widget.dart';
-import 'package:stock_and_buy_app/presentation/main_sides/collections/widgets/product_list_widget.dart';
+import 'package:stock_and_buy_app/presentation/main_sides/collections/widgets/product_list/product_list_widget.dart';
 import 'package:stock_and_buy_app/presentation/widgets/default_container.dart';
 
 class CollectionSide extends StatelessWidget {

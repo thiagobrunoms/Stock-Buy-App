@@ -13,17 +13,44 @@ class ProductItemWidget extends StatefulWidget {
 }
 
 class _ProductItemWidgetState extends State<ProductItemWidget> {
+  late bool isSelected;
+  @override
+  void initState() {
+    super.initState();
+
+    isSelected = widget.isSelected;
+  }
+
   @override
   Widget build(BuildContext context) {
-    return DefaultContainer(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          ProductImage(url: widget.product.imageUrl),
-          Text(widget.product.name, style: const TextStyle(fontWeight: FontWeight.bold),),
-          Text('${widget.product.quantityInStock} in stock', style: const TextStyle(color: Colors.grey),),
-        ],
-      ),
+    return Stack(
+      alignment: Alignment.topRight,
+      children: [
+        InkWell(
+          onTap: () {
+            setState(() {
+              isSelected = !isSelected;
+            });
+          },
+          child: DefaultContainer(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                ProductImage(url: widget.product.imageUrl),
+                Text(widget.product.name, style: const TextStyle(fontWeight: FontWeight.bold),),
+                Text('${widget.product.quantityInStock} in stock', style: const TextStyle(color: Colors.grey),),
+              ],
+            ),
+          ),
+        ),
+        if (isSelected)
+          const Positioned(
+            top: 20,
+            right: 10,
+            child: Icon(Icons.check_circle_outline, color: Color.fromARGB(255, 184, 220, 216)),
+          )
+      ],
     );
   }
+  
 }
