@@ -9,6 +9,7 @@ class DefaultContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(10),
+      margin: const EdgeInsets.all(3),
       color: Colors.white,
       child: child,
     );

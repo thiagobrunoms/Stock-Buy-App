@@ -11,8 +11,13 @@ class CollectionsAppBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           const SizedBox(width: 1,),
-          const Text('All Collections'),
-          Icon(Icons.search, color: Theme.of(context).primaryColor)
+          Row(
+            children: [
+              const Text('All collections'),
+              Icon(Icons.arrow_drop_down, color: Theme.of(context).primaryColor,)
+            ],
+          ),
+          Icon(Icons.search, color: Theme.of(context).primaryColor),
         ],
       ),
     );
