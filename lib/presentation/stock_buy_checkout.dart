@@ -10,11 +10,12 @@ class StockBuyCheckout extends StatefulWidget {
 }
 
 class _StockBuyCheckoutState extends State<StockBuyCheckout> {
+  int bottomAppBarIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return OrientationBuilder(
       builder: (context, orientation) {
-
         return Scaffold(
           body: SafeArea(
             child: Row(
@@ -28,9 +29,35 @@ class _StockBuyCheckoutState extends State<StockBuyCheckout> {
               ],
             ),
           ),
+          
+          bottomNavigationBar: BottomNavigationBar(
+            currentIndex: bottomAppBarIndex,
+            items: [
+              _buildBottonBarItem(Icons.car_crash, 'Checkout', 0),
+              _buildBottonBarItem(Icons.shop, 'Orders', 1),
+              _buildBottonBarItem(Icons.store, 'Store', 2),
+            ],
+            onTap: (index) {
+              setState(() {
+                bottomAppBarIndex = index;
+              });
+            },
+          ),
         );
       }
     );
   }
 
+  BottomNavigationBarItem _buildBottonBarItem(IconData icon, String label, int index) {
+    return BottomNavigationBarItem(
+      icon: Row(
+        children: [
+          Icon(icon),
+          const SizedBox(width: 10,),
+          Text(label, style: TextStyle(color: index == bottomAppBarIndex ? Theme.of(context).primaryColor : null),)
+        ],
+      ),
+      label: ''
+    );
+  }
 }

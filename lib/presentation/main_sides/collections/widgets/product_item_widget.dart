@@ -2,22 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:stock_and_buy_app/presentation/dtos/product.dart';
 import 'package:stock_and_buy_app/presentation/widgets/default_container.dart';
 
-class ProductItem extends StatefulWidget {
+class ProductItemWidget extends StatefulWidget {
   final Product product;
   final bool isSelected;
-  const ProductItem({super.key, required this.product, this.isSelected = false});
+  const ProductItemWidget({super.key, required this.product, this.isSelected = false});
 
   @override
-  State<ProductItem> createState() => _ProductItemState();
+  State<ProductItemWidget> createState() => _ProductItemWidgetState();
 }
 
-class _ProductItemState extends State<ProductItem> {
+class _ProductItemWidgetState extends State<ProductItemWidget> {
   @override
   Widget build(BuildContext context) {
     return DefaultContainer(
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Image.asset('assets/images/perfume.png', height: 10, width: 10,),
+          Image.asset(widget.product.imageUrl, height: 80, width: 80,),
           Text(widget.product.name, style: const TextStyle(fontWeight: FontWeight.bold),),
           Text('${widget.product.quantityInStock} in stock', style: const TextStyle(color: Colors.grey),),
         ],
