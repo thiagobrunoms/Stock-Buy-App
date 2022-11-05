@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:stock_and_buy_app/presentation/widgets/default_container.dart';
 
 class CustomerInfoWidget extends StatelessWidget {
   const CustomerInfoWidget({super.key});
