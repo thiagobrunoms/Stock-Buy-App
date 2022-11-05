@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:stock_and_buy_app/presentation/dtos/product.dart';
 import 'package:stock_and_buy_app/presentation/widgets/default_container.dart';
+import 'package:stock_and_buy_app/presentation/widgets/product_image.dart';
 
 class ProductItemWidget extends StatefulWidget {
   final Product product;
@@ -18,7 +19,7 @@ class _ProductItemWidgetState extends State<ProductItemWidget> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Image.asset(widget.product.imageUrl, height: 80, width: 80,),
+          ProductImage(url: widget.product.imageUrl),
           Text(widget.product.name, style: const TextStyle(fontWeight: FontWeight.bold),),
           Text('${widget.product.quantityInStock} in stock', style: const TextStyle(color: Colors.grey),),
         ],

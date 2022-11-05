@@ -27,7 +27,7 @@ class CollectionSide extends StatelessWidget {
           itemCount: 25,
           itemBuilder: (context, index) {
             return ProductItemWidget(
-              product: Product(name: 'Perfume $index', imageUrl: 'assets/images/perfume.png', quantityInStock: 10),
+              product: Product(name: 'Perfume $index', imageUrl: 'assets/images/perfume.png', quantityInStock: 10, price: 990),
             );
           }),
         ),

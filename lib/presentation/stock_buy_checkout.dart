@@ -50,6 +50,7 @@ class _StockBuyCheckoutState extends State<StockBuyCheckout> {
   BottomNavigationBarItem _buildBottonBarItem(IconData icon, String label, int index) {
     return BottomNavigationBarItem(
       icon: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Icon(icon),
           const SizedBox(width: 10,),
