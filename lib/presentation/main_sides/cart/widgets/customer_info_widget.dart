@@ -6,11 +6,14 @@ class CustomerInfoWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DefaultContainer(
+    return Container(
+      margin: const EdgeInsets.all(10),
+      padding: const EdgeInsets.only(left: 15, top: 20, bottom: 20, right: 15),
+      color: Colors.white,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const Text('Customer', style: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold)),
+          const Text('Customer', style: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold, fontSize: 17.0)),
           Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
