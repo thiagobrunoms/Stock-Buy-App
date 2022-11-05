@@ -19,17 +19,19 @@ class CollectionSide extends StatelessWidget {
             ),
           ),
         ),
-        Expanded(child: GridView.builder(
-          scrollDirection: Axis.horizontal,
-          gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-            maxCrossAxisExtent: 200,
-          ), 
-          itemCount: 25,
-          itemBuilder: (context, index) {
-            return ProductItemWidget(
-              product: Product(name: 'Perfume $index', imageUrl: 'assets/images/perfume.png', quantityInStock: 10, price: 990),
-            );
-          }),
+        Expanded(
+          child: GridView.builder(
+            scrollDirection: Axis.horizontal,
+            gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+              maxCrossAxisExtent: 200,
+            ), 
+            itemCount: 25,
+            itemBuilder: (context, index) {
+              return ProductItemWidget(
+                product: Product(name: 'Perfume $index', imageUrl: 'assets/images/perfume.png', quantityInStock: 10, price: 990),
+              );
+            }
+          ),
         ),
         const Padding(
           padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
