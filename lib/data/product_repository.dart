@@ -1,6 +1,9 @@
 import 'package:stock_and_buy_app/domain/i_product_repository.dart';
 import 'package:stock_and_buy_app/presentation/dtos/product.dart';
 
+
+//I can also consider an additional datasource layer (which I could have multiple datasources - e.g.: remote and local).
+//However, for the sake of simplicity, in this assessment, I considered only the repository layer
 class ProductRepositoryImpl implements ProductRepository {
   @override
   Future<Product> getProductById(int id) async {

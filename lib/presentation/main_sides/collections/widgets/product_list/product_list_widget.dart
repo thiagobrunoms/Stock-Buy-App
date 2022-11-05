@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:stock_and_buy_app/domain/product_repository.dart';
+import 'package:stock_and_buy_app/data/product_repository.dart';
 import 'package:stock_and_buy_app/presentation/dtos/product.dart';
 import 'package:stock_and_buy_app/presentation/main_sides/collections/widgets/product_item_widget.dart';
 import 'package:stock_and_buy_app/presentation/main_sides/collections/widgets/product_list/product_list_widget_controller.dart';
