@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:stock_and_buy_app/presentation/widgets/cart_appbar.dart';
-import 'package:stock_and_buy_app/presentation/widgets/collections_appbar.dart';
-import 'package:stock_and_buy_app/presentation/widgets/default_container.dart';
+import 'package:stock_and_buy_app/presentation/main_sides/cart/cart_side.dart';
+import 'package:stock_and_buy_app/presentation/main_sides/collections/collection_side.dart';
 
 class StockBuyCheckout extends StatefulWidget {
   const StockBuyCheckout({super.key});
@@ -19,13 +18,13 @@ class _StockBuyCheckoutState extends State<StockBuyCheckout> {
         return Scaffold(
           body: SafeArea(
             child: Row(
-              children: [
+              children: const [
                 Flexible(
                   flex: 2,
-                  child: _buildCollections()),
+                  child: CollectionSide()),
                 Flexible(
                   flex: 1,
-                  child: _buildCart()),
+                  child: CartSide()),
               ],
             ),
           ),
@@ -33,20 +32,5 @@ class _StockBuyCheckoutState extends State<StockBuyCheckout> {
       }
     );
   }
-  
-  Widget _buildCollections() {
-    return Column(
-      children: const [
-        CollectionsAppBar()
-      ],
-    );
-  }
-  
-  Widget _buildCart() {
-    return Column(
-      children: const [
-        CartAppBar(),
-      ],
-    );
-  }
+
 }
