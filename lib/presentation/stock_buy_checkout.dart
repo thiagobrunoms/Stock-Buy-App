@@ -15,6 +15,8 @@ class _StockBuyCheckoutState extends State<StockBuyCheckout> {
   @override
   Widget build(BuildContext context) {
     return OrientationBuilder(
+      //TODO: If vertical, the app can change the view strategy:
+      //The Right-side area (Cart) becomes an additional page, while checkout button becomes a FAB on the main screen (routes to cart page).
       builder: (context, orientation) {
         return Scaffold(
           body: SafeArea(
@@ -32,7 +34,7 @@ class _StockBuyCheckoutState extends State<StockBuyCheckout> {
           bottomNavigationBar: BottomNavigationBar(
             currentIndex: bottomAppBarIndex,
             items: [
-              _buildBottonBarItem(Icons.car_crash, 'Checkout', 0),
+              _buildBottonBarItem(Icons.local_grocery_store, 'Checkout', 0),
               _buildBottonBarItem(Icons.shop, 'Orders', 1),
               _buildBottonBarItem(Icons.store, 'Store', 2),
             ],
