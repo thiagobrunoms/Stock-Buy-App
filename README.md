@@ -30,7 +30,7 @@ flutter run -d [DEVICE_ID]
 
 The final UI design can be seen in the following screenshot. Some UI components of the original design could not be detailed developed due to the low-quality screenshot from the video presentation available in Loom.
 
-![Screenshot_1667696193](https://user-images.githubusercontent.com/8793313/200149139-3bcf0b64-09c6-4d9d-a59a-4245c0d08569.png)
+![Screenshot_1667697192](https://user-images.githubusercontent.com/8793313/200149410-56b030c9-6cba-4ab9-95cb-f9daed47b0b4.png)
 
 ### Details about some widgets
 
