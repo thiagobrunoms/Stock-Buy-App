@@ -21,7 +21,20 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        primaryColor: colorCustom,
         primarySwatch: colorCustom,
+        textTheme: TextTheme(
+          headlineLarge: TextStyle(color: Colors.grey[600], fontWeight: FontWeight.bold, fontSize: 20),
+          headlineMedium: TextStyle(color: colorCustom, fontSize: 17),
+          headlineSmall: TextStyle(color: colorCustom, fontSize: 15),
+          titleLarge: TextStyle(color: Colors.grey[600], fontWeight: FontWeight.bold, fontSize: 15),
+          titleMedium: TextStyle(color: Colors.grey[400], fontSize: 16),
+          titleSmall: TextStyle(color: Colors.grey[400], fontSize: 14),
+          labelLarge: TextStyle(color: Colors.grey[400], fontSize: 14),
+          bodyLarge: TextStyle(color: Colors.grey[600], fontWeight: FontWeight.bold, fontSize: 18),
+          
+
+        )
       ),
       home: const StockBuyCheckout(),
     );

@@ -41,8 +41,8 @@ class _ProductItemWidgetState extends State<ProductItemWidget> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 ProductImage(url: widget.product.imageUrl),
-                Text(widget.product.name, style: const TextStyle(fontWeight: FontWeight.bold),),
-                Text('${widget.product.quantityInStock} in stock', style: const TextStyle(color: Colors.grey),),
+                Text(widget.product.name, style: Theme.of(context).textTheme.titleLarge),
+                Expanded(child: Text('${widget.product.quantityInStock} in stock', style: Theme.of(context).textTheme.titleSmall)),
               ],
             ),
           ),

@@ -10,7 +10,7 @@ class DiscountWidget extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text('Add discount', style: TextStyle(color: Theme.of(context).primaryColor, fontSize: 17)),
+          Text('Add discount', style: Theme.of(context).textTheme.headlineMedium),
           Icon(Icons.add_circle_outline, color: Theme.of(context).primaryColor)
         ],
       )

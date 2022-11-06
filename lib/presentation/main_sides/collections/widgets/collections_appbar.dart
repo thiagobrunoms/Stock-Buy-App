@@ -13,7 +13,7 @@ class CollectionsAppBar extends StatelessWidget {
           const SizedBox(width: 1,),
           Row(
             children: [
-              const Text('All collections', style: TextStyle(fontWeight: FontWeight.bold),),
+              Text('All collections', style: Theme.of(context).textTheme.headlineLarge),
               Icon(Icons.arrow_drop_down, color: Theme.of(context).primaryColor,)
             ],
           ),

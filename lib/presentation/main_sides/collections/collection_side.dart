@@ -16,15 +16,15 @@ class CollectionSide extends StatelessWidget {
         DefaultContainer(
           child: Center(
             child: Text('Quick sale', 
-              style: TextStyle(color: Theme.of(context).primaryColor),
+              style: Theme.of(context).textTheme.headlineMedium
             ),
           ),
         ),
         const Expanded(child: ProductListWidget()),
-        const Padding(
-          padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
-          child: Center(child: Text('Page 1 of 3', style: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold))),
-        )
+        Padding(
+          padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
+          child: Center(child: Text('Page 1 of 3', style: Theme.of(context).textTheme.labelLarge),
+        ))
       ],
     );
   }

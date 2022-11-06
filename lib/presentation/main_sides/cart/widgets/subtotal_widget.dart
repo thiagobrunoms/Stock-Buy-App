@@ -15,8 +15,8 @@ class _SubtotalWidgetState extends State<SubtotalWidget> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const Text('Subtotal', style: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold, fontSize: 17)),
-          Text('\$${345.toStringAsFixed(2)}', style: const TextStyle(color: Colors.grey, fontWeight: FontWeight.bold, fontSize: 17)),
+          Text('Subtotal', style: Theme.of(context).textTheme.titleMedium),
+          Text('\$${345.toStringAsFixed(2)}', style: Theme.of(context).textTheme.titleMedium),
         ],
       )
     );

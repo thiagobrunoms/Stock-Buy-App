@@ -12,13 +12,13 @@ class CustomerInfoWidget extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const Text('Customer', style: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold, fontSize: 17.0)),
+          Text('Customer', style: Theme.of(context).textTheme.titleMedium),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Text('Kate Bell', style: TextStyle(color: Theme.of(context).primaryColor),),
-                Text('kate.bell@googlemail.com', style: TextStyle(color: Theme.of(context).primaryColor),)
+                Text('Kate Bell', style: Theme.of(context).textTheme.headlineSmall),
+                Text('kate.bell@googlemail.com', style: Theme.of(context).textTheme.headlineSmall),
               ],
             ),
           )

@@ -11,7 +11,7 @@ class CartAppBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           const SizedBox(width: 1,),
-          const Text('Cart', style: TextStyle(fontWeight: FontWeight.bold),),
+          Text('Cart', style: Theme.of(context).textTheme.headlineLarge),
           Row(
             children: [
               Icon(Icons.delete, color: Theme.of(context).primaryColor),
